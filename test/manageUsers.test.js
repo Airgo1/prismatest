@@ -49,7 +49,84 @@ const testData = [
 
     address: "276 Preston Court, Fairacres, Missouri, 2664",
   },
+]
+
+const blueEyeColor = [
+  {
+    address: "130 Brighton Court, Barrelville, Arkansas, 2523",
+    age: 38,
+    company: "DELPHIDE",
+    email: "henson.jacobson@delphide.org",
+    eyeColor: "blue",
+    name: { first: "Henson", last: "Jacobson" },
+  },
+  {
+    address: "276 Preston Court, Fairacres, Missouri, 2664",
+    age: 35,
+    company: "GLOBOIL",
+    email: "phyllis.hester@globoil.us",
+    eyeColor: "blue",
+    name: { first: "Phyllis", last: "Hester" },
+  },
+  {
+    address: "276 Preston Court, Fairacres, Missouri, 2664",
+    age: 31,
+    company: "GLOBOIL",
+    email: "phyllis.hester@globoil.us",
+    eyeColor: "blue",
+    name: { first: "Kristina", last: "Nelson" },
+  },
+]
+
+const usersAge35_40 = [
+  {
+    address: "130 Brighton Court, Barrelville, Arkansas, 2523",
+    age: 38,
+    company: "DELPHIDE",
+    email: "henson.jacobson@delphide.org",
+    eyeColor: "blue",
+    name: { first: "Henson", last: "Jacobson" },
+  },
+  {
+    age: 37,
+    eyeColor: "brown",
+    name: {
+      first: "Naomi",
+      last: "Puckett",
+    },
+    company: "ROUGHIES",
+    email: "naomi.puckett@roughies.name",
+    address: "973 Cleveland Street, Bend, Alabama, 147",
+  },
+  {
+    address: "276 Preston Court, Fairacres, Missouri, 2664",
+    age: 35,
+    company: "GLOBOIL",
+    email: "phyllis.hester@globoil.us",
+    eyeColor: "blue",
+    name: { first: "Phyllis", last: "Hester" },
+  },
+]
+
+const usersBlueEyeColorAge35_45 = [
+  {
+    address: "130 Brighton Court, Barrelville, Arkansas, 2523",
+    age: 38,
+    company: "DELPHIDE",
+    email: "henson.jacobson@delphide.org",
+    eyeColor: "blue",
+    name: { first: "Henson", last: "Jacobson" },
+  },
+  {
+    address: "276 Preston Court, Fairacres, Missouri, 2664",
+    age: 35,
+    company: "GLOBOIL",
+    email: "phyllis.hester@globoil.us",
+    eyeColor: "blue",
+    name: { first: "Phyllis", last: "Hester" },
+  }
 ];
+
 
 describe("tests validateAge", () => {
   it("should throw error if passing wrong string", () => {
@@ -121,96 +198,21 @@ describe("tests validateEyeColor", () => {
 });
 
 describe("tests filterData", () => {
-  
-
   it("should return only persons with eye color equal to blue", () => {
-    const peopleWithBlueEyeColor = [
-      {
-        address: "130 Brighton Court, Barrelville, Arkansas, 2523",
-        age: 38,
-        company: "DELPHIDE",
-        email: "henson.jacobson@delphide.org",
-        eyeColor: "blue",
-        name: { first: "Henson", last: "Jacobson" },
-      },
-      {
-        address: "276 Preston Court, Fairacres, Missouri, 2664",
-        age: 35,
-        company: "GLOBOIL",
-        email: "phyllis.hester@globoil.us",
-        eyeColor: "blue",
-        name: { first: "Phyllis", last: "Hester" },
-      },
-      {
-        address: "276 Preston Court, Fairacres, Missouri, 2664",
-        age: 31,
-        company: "GLOBOIL",
-        email: "phyllis.hester@globoil.us",
-        eyeColor: "blue",
-        name: { first: "Kristina", last: "Nelson" },
-      },
-    ];
     expect(service.filterData(testData, { eyeColor: "blue" })).toEqual(
-      peopleWithBlueEyeColor
+      blueEyeColor
     );
   });
 
   it("should return only persons that are between 35 and 40", () => {
-    const peopleThatAreBetween35and40 = [
-      {
-        address: "130 Brighton Court, Barrelville, Arkansas, 2523",
-        age: 38,
-        company: "DELPHIDE",
-        email: "henson.jacobson@delphide.org",
-        eyeColor: "blue",
-        name: { first: "Henson", last: "Jacobson" },
-      },
-      {
-        age: 37,
-        eyeColor: "brown",
-        name: {
-          first: "Naomi",
-          last: "Puckett",
-        },
-        company: "ROUGHIES",
-        email: "naomi.puckett@roughies.name",
-        address: "973 Cleveland Street, Bend, Alabama, 147",
-      },
-      {
-        address: "276 Preston Court, Fairacres, Missouri, 2664",
-        age: 35,
-        company: "GLOBOIL",
-        email: "phyllis.hester@globoil.us",
-        eyeColor: "blue",
-        name: { first: "Phyllis", last: "Hester" },
-      },
-    ];
     expect(service.filterData(testData, { age: "35-40" })).toEqual(
-      peopleThatAreBetween35and40
+      usersAge35_40
     );
   });
 
   it("should return only persons that are between 35 and 40 and have blue eyes", () => {
-    const peopleWithBlueEyeAndAge35to40 = [
-      {
-        address: "130 Brighton Court, Barrelville, Arkansas, 2523",
-        age: 38,
-        company: "DELPHIDE",
-        email: "henson.jacobson@delphide.org",
-        eyeColor: "blue",
-        name: { first: "Henson", last: "Jacobson" },
-      },
-      {
-        address: "276 Preston Court, Fairacres, Missouri, 2664",
-        age: 35,
-        company: "GLOBOIL",
-        email: "phyllis.hester@globoil.us",
-        eyeColor: "blue",
-        name: { first: "Phyllis", last: "Hester" },
-      },
-    ];
     expect(
       service.filterData(testData, { age: "35-40", eyeColor: "blue" })
-    ).toEqual(peopleWithBlueEyeAndAge35to40);
+    ).toEqual(usersBlueEyeColorAge35_45);
   });
 });
