@@ -54,7 +54,7 @@ export class ManageUsers {
   validateEyeColor(eyeColor) {
     const validColors = ["brown", "blue", "green"];
     if (!validColors.includes(eyeColor)) {
-      throw new Error(personServiceErrors.QUERY_EYECOLOR_INVALID_VALUE);
+      throw new Error(ManageUsersErrors.QUERY_EYECOLOR_INVALID_VALUE);
     }
     return true;
   }

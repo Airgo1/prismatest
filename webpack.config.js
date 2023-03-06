@@ -57,7 +57,7 @@ module.exports = {
     new BundleAnalyzerPlugin(),
     new CopyPlugin({
       patterns: [
-        { from: "data", to: "" },
+        { from: "data/", to: "" },
       ],
     }),
   ],
