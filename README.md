@@ -50,6 +50,26 @@ npm start
 npm run build
 ```
 
+### Test
+
+```sh
+npm test
+```
+
+### use application
+
+Vous pouvez filter les données de la table d'utilisateurs avec les paremetres suivant : age ou colorEyes.
+exemple : 
+http://localhost:3000/?eyeColor=blue
+http://localhost:3000/?eyeColor=green
+http://localhost:3000/?eyeColor=brown
+http://localhost:3000/?age=20-25
+http://localhost:3000/?age=25-30
+http://localhost:3000/?age=30-35
+
+http://localhost:3000/?eyeColor=blue&age=25-30
+
+
 ### Features:
 
 - ES6 Support via [babel](https://babeljs.io/) (v7)
@@ -57,3 +77,4 @@ npm run build
 - SASS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
 - Autoprefixing of browserspecific CSS rules via [postcss](https://postcss.org/) and [postcss-preset-env](https://github.com/csstools/postcss-preset-env)
 - Style Linting via [stylelint](https://stylelint.io/)
+
