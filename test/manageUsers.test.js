@@ -130,7 +130,7 @@ const usersBlueEyeColorAge35_45 = [
 
 describe("tests validateAge", () => {
   it("should throw error if passing wrong string", () => {
-    expect(() => service.validateAge("aaaa")).toThrow(
+    expect(() => service.validateAge("aa-aa")).toThrow(
       ManageUsersErrors.QUERY_AGE_INVALID_INPUT
     );
   });

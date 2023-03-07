@@ -19,6 +19,10 @@ Le module devra être fonctionnel sur un serveur local aussi bien que sur un hé
 L'entrée `eyeColor` devra être filtrable suivant l'une des valeurs suivantes : `blue`, `brown`, `green`
 L'entrée `age` devra être filtrable par tranche de 5 ans : de 20 à 25 ans, de 26 à 30 ans, de 31 à 35 ans et enfin de 36 à 41 ans
 
+## Question
+
+Il y a un problemes avec les tranches d'age indiqué. Elles ne sont pas unifore. Afin de faire le test sans avoir de blocage, j'ai donc mis des tranche d'age libre. 
+
 ## Conditions de validation impératives 
 
 * Le module JavaScript devra être rédigé en ES6 +
@@ -66,7 +70,6 @@ http://localhost:3000/?eyeColor=brown
 http://localhost:3000/?age=20-25
 http://localhost:3000/?age=25-30
 http://localhost:3000/?age=30-35
-
 http://localhost:3000/?eyeColor=blue&age=25-30
 
 

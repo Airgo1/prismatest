@@ -35,13 +35,18 @@ export class ManageUsers {
       throw new Error(ManageUsersErrors.QUERY_AGE_INVALID_INPUT);
     }
 
+    // check the start range 20, 26, 36 
+    /* if(![20,26,31,36].includes(startAgeRange)) {
+      throw new Error(ManageUsersErrors.QUERY_AGE_INVALID_INPUT);
+    } */
+
     // check the intervale
     if (endAgeRange - startAgeRange !== 5) {
       throw new Error(ManageUsersErrors.QUERY_AGE_INVALID_RANGE);
     }
 
-    // check if age is between 20 and 40
-    if (endAgeRange > 40 || startAgeRange < 20) {
+    // check if age is between 20 and 41
+    if (endAgeRange > 41 || startAgeRange < 20) {
       throw new Error(ManageUsersErrors.QUERY_AGE_INVALID_MIN_MAX_AGE);
     }
     return true;
@@ -66,7 +71,7 @@ export class ManageUsers {
   getAgeRangeFromString(age) {
     const [startAgeRange, endAgeRange] = (age || "")
       .split("-")
-      .map((i) => parseInt(i));
+      .map((number) => parseInt(number));
     return { startAgeRange, endAgeRange }
   }
 
