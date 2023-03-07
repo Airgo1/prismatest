@@ -23,19 +23,6 @@ L'entrée `age` devra être filtrable par tranche de 5 ans : de 20 à 25 ans, de
 
 Il y a un problemes avec les tranches d'age indiqué. Elles ne sont pas unifore. Afin de faire le test sans avoir de blocage, j'ai donc mis des tranches d'age libre compris entre 20 et 25.. 
 
-## Conditions de validation impératives 
-
-* Le module JavaScript devra être rédigé en ES6 +
-* Pas de framework JS (React, Vue, etc.)
-
-## Points d'attentions
-
-* Fournir une documentation clair d'installation et de fonctionnement.
-* Si besoin, mise en place d'un outil de "bundling" (Webpack) et de transpilation (BabelJS).
-* Organisation du code : modules, sous-modules, si nécessaire.
-* Qualité et documentation du code.
-* Tests Unitaires et/ou fonctionnels.
-
 ### Installation
 
 ```sh
