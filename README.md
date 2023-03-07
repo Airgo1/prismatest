@@ -21,7 +21,7 @@ L'entrée `age` devra être filtrable par tranche de 5 ans : de 20 à 25 ans, de
 
 ## Question
 
-Il y a un problemes avec les tranches d'age indiqué. Elles ne sont pas unifore. Afin de faire le test sans avoir de blocage, j'ai donc mis des tranche d'age libre. 
+Il y a un problemes avec les tranches d'age indiqué. Elles ne sont pas unifore. Afin de faire le test sans avoir de blocage, j'ai donc mis des tranches d'age libre compris entre 20 et 25.. 
 
 ## Conditions de validation impératives 
 
